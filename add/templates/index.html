@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>加法</title>
+</head>
+<body>
+<div align="center" style="margin-top: 40px;">
+    <form name="form1"   method="POST">
+        <input type="text" placeholder="adder" name="adder1" value="{{ var1  }}">+
+        <input type="text" placeholder="adder-2" name="adder2" value="{{ var2  }}">=
+        <input type="text" readonly="readonly" placeholder="result" name="result" value="{{ result }}">
+        <input type="submit" value="计算" οnclick="">
+    </form>
+</div>
+{% if message %}
+    <p style="color:red">{{ message }}</p>
+    {% endif %}
+</body>
+
