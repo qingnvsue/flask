@@ -21,7 +21,7 @@ def add():
     try:
         id= float(id)
         age = float(age)
-        conn = pymysql.connect(host='39.106.168.84', user='flask_topvj_net', password='xxxxxx', port=3306,
+        conn = pymysql.connect(host='39.106.168.84', user='flask_topvj_net', password='xxxxx', port=3306,
                                db='flask_topvj_net')
         cur = conn.cursor()  # 生成游标对象
         sql = "INSERT INTO `student`(`id`, `name`, `age`, `sex`) VALUES (%s,%s,%s,%s)",(id, name, age, sex)
@@ -39,7 +39,7 @@ def add():
 
 @app.route('/c', methods=['GET', 'POST'])
 def index():
-    conn = pymysql.connect(host='39.106.168.84', user='flask_topvj_net', password='ZmBfzGjYnH87wJPR', port=3306,
+    conn = pymysql.connect(host='39.106.168.84', user='flask_topvj_net', password='xxxxxx', port=3306,
                            db='flask_topvj_net')
     cur = conn.cursor()
     sql = "SELECT * FROM `student` WHERE `id` = %s" %data.a
