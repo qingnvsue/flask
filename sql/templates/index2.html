@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sql测试</title>
+</head>
+<body>
+<div align="center" style="margin-top: 40px;">
+    <form name="form1"     method="POST">
+        id =<input type="text" placeholder="id" name="id" value="{{ var1  }}">
+        name=<input type="text" placeholder="name" name="name" value="{{ var2  }}">
+        age=<input type="text" placeholder="age" name="age" value="{{ var3  }}">
+        sex=<input type="text" placeholder="sex" name="sex" value="{{ var4  }}">
+        <input type="submit" value="提交" οnclick="">
+    </form>
+
+</div>
+<img src="data:image/png;base64, {{ plot_url }}">
+{% if message %}
+    <p style="color:red">{{ message }}</p>
+    {% endif %}
+</body>
