@@ -1,6 +1,6 @@
 import pymysql
 #连接数据库
-conn = pymysql.connect(host='39.106.168.84', user='flask_topvj_net', password='xxxxx', port=3306, db='flask_topvj_net')
+conn = pymysql.connect(host='39.106.168.84', user='flask_topvj_net', password='xxxxxxx', port=3306, db='flask_topvj_net')
 
 cur = conn.cursor() # 生成游标对象
 
@@ -101,7 +101,15 @@ try:
 except:
    # 如果发生错误则回滚
    conn.rollback()
-
+sql = "INSERT INTO `student`(`id`, `name`, `age`, `sex`) VALUES (%s,%s,%s,%s)",(6,b,c,d)
+try:
+   # 执行sql语句
+   cur.execute(*sql)
+   # 提交到数据库执行
+   conn.commit()
+except:
+   # 如果发生错误则回滚
+   conn.rollback()
 # 关闭数据库连接
 conn.close()
 
