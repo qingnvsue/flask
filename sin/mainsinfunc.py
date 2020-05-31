@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def home():
-    return render_template('index1.html')
+    return render_template('index4.html')
 
 @app.route('/', methods=['POST'])
 def add():
@@ -36,7 +36,7 @@ def add():
             plot_url = base64.b64encode(img.getvalue()).decode()
             return render_template('index1.html', var1=A, var2=f, var3=xmin, var4=xmax, plot_url=plot_url)
         except:
-            return render_template('index1.html', message='inputs false!!!', var1=A, var2=f, var3=xmin, var4=xmax)
+            return render_template('index4.html', message='inputs false!!!', var1=A, var2=f, var3=xmin, var4=xmax)
         
 if __name__ == '__main__':
     app.run(port=8002)

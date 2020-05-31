@@ -6,19 +6,6 @@
 </head>
 <body>
 正弦函数y=Asin(2&pi;fx)
-<br>请输入幅度A，频率f，以及x对应的范围:
-<div align="center" style="margin-top: 40px;">
-    <form name="form1"  method="POST">
-        A=<input type="text" placeholder="A" name="attitude" value="{{ var1  }}">
-        f=<input type="text" placeholder="f" name="frequency" value="{{ var2  }}">
-        x最小值=<input type="text" placeholder="x最小值" name="xmin" value="{{ var3  }}">
-        x最大值=<input type="text" placeholder="x最大值" name="xmax" value="{{ var4  }}">
-        <!--<input type="text" readonly="readonly" placeholder="result" name="result" value="{{ result }}">-->
-        <input type="submit" value="计算" οnclick="">
-    </form>
-</div>
-<img src="data:image/png;base64, {{ plot_url }}">
-{% if message %}
-    <p style="color:red">{{ message }}</p>
-    {% endif %}
+<br>幅度A={{ var1  }}，频率f={{ var2  }}，以及x对应的范围:{{ var3  }}到{{ var4  }}
+<br><img src="data:image/png;base64, {{ plot_url }}">
 </body>
