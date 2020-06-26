@@ -1,6 +1,7 @@
+
 import pymysql
 #连接数据库
-conn = pymysql.connect(host='39.106.168.84', user='flask_topvj_net', password='xxxxxxx', port=3306, db='flask_topvj_net')
+conn = pymysql.connect(host='39.106.168.84', user='xxxx', password='xxxxxxx', port=3306, db='flask_topvj_net')
 
 cur = conn.cursor() # 生成游标对象
 

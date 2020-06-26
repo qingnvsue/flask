@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    conn = pymysql.connect(host='39.106.168.84', user='flask_topvj_net', password='xxxxxxxx', port=3306,
+    conn = pymysql.connect(host='39.106.168.84', user='xxxx', password='xxxxxxxx', port=3306,
                         db='flask_topvj_net')
     cur = conn.cursor()
     sql = "SELECT `name`, `age` FROM `student` WHERE 1"
